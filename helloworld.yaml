@@ -1,0 +1,16 @@
+asyncapi: 2.5.0
+info:
+  title: Hello world application
+  version: '0.1.0'
+servers:
+  dev:
+    url: localhost:3000
+    protocol: mqtt
+    description: Test broker
+channels:
+  hello:
+    publish:
+      message:
+        payload:
+          type: string
+          pattern: '^hello .+$'
